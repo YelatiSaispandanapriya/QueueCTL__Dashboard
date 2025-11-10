@@ -92,7 +92,7 @@ Job data survives restart.
 
 ## Architecture Overview
 
-![Design](images/logo.png)
+![Design](QueueCTL/images/logo.png)
 
 
 ### Job Lifecycle
