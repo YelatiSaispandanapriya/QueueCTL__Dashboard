@@ -71,6 +71,23 @@ python queuectl.py config set max_retries 5
 python queuectl.py config get max_retries
 ```
 
+Basic job completes successfully.
+![Basic job completes successfully.](outputs/Basic job completes successfully.)
+
+Failed job retries with backoff and moves to DLQ.
+![Failed job retries with backoff and moves to DLQ.](outputs/Failed job retries with backoff and moves to DLQ.)
+
+Multiple workers process jobs without overlap.
+![Multiple workers process jobs without overlap.](outputs/Multiple workers process jobs without overlap.)
+
+Invalid commands fail gracefully.
+![Invalid commands fail gracefully.](outputs/Invalid commands fail gracefully.)
+
+Job data survives restart.
+![Job data survives restart.](outputs/Job data survives restart.)
+
+
+
 ---
 
 ## 3️⃣ Architecture Overview
@@ -146,10 +163,19 @@ python queuectl.py config get max_retries
 ## Bonus Features Implemented
 
 - Job timeout handling
+  ![Job timeout handling](outputs/Job timeout handling)
+
 - Job priority queues
+![Job priority queues](outputs/Job priority queues)
+  
 - Scheduled/delayed jobs (`run_at`)
+
+![Scheduleddelayed jobs (run_at)-Before time](outputs/Scheduleddelayed jobs (run_at)-Before time)
+![Scheduleddelayed jobs (run_at)-after time](outputs/Scheduleddelayed jobs (run_at)-after time)
+
 - Minimal web dashboard
-- Exponential backoff with retries
+
+![Minimal web dashboard](outputs/Minimal web dashboard)
 
 ---
 
