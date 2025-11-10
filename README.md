@@ -70,21 +70,29 @@ python queuectl.py dlq retry job_id
 python queuectl.py config set max_retries 5
 python queuectl.py config get max_retries
 ```
-
+# Scenario - 1: Basic job completes successfully
 
 ![Basic job completes successfully.](QueueCTL/outputs/s1.png)
 
-Failed job retries with backoff and moves to DLQ.
-![Failed job retries with backoff and moves to DLQ.](outputs/Failed job retries with backoff and moves to DLQ.)
 
-Multiple workers process jobs without overlap.
-![Multiple workers process jobs without overlap.](outputs/Multiple workers process jobs without overlap.)
 
-Invalid commands fail gracefully.
-![Invalid commands fail gracefully.](outputs/Invalid commands fail gracefully.)
+# Scenario-2: Failed job retries with backoff and moves to DLQ.
+![Failed job retries with backoff and moves to DLQ.](QueueCTL/outputs/s2.png)
 
-Job data survives restart.
-![Job data survives restart.](outputs/Job data survives restart.)
+
+
+# Scenario-3: Multiple workers process jobs without overlap.
+![Multiple workers process jobs without overlap.](QueueCTL/outputs/s3.png)
+
+
+
+# Scenario-4: Invalid commands fail gracefully.
+![Invalid commands fail gracefully.](QueueCTL/outputs/s4.png)
+
+
+
+# Scenario-5: Job data survives restart.
+![Job data survives restart.](QueueCTL/outputs/s5.png)
 
 
 
@@ -163,19 +171,24 @@ Job data survives restart.
 ## Bonus Features Implemented
 
 - Job timeout handling
-  ![Job timeout handling](outputs/Job timeout handling)
+  ![Job timeout handling](QueueCTL/outputs/op1.png)
+
+  
 
 - Job priority queues
-![Job priority queues](outputs/Job priority queues)
+![Job priority queues](QueueCTL/outputs/op2.png)
+
+
   
 - Scheduled/delayed jobs (`run_at`)
+![Scheduleddelayed jobs (run_at)-Before time](QueueCTL/outputs/op3a.png)
+![Scheduleddelayed jobs (run_at)-after time](QueueCTL/outputs/op3b.png)
 
-![Scheduleddelayed jobs (run_at)-Before time](outputs/Scheduleddelayed jobs (run_at)-Before time)
-![Scheduleddelayed jobs (run_at)-after time](outputs/Scheduleddelayed jobs (run_at)-after time)
+
 
 - Minimal web dashboard
+![Minimal web dashboard](QueueCTL/outputs/op4.png)
 
-![Minimal web dashboard](outputs/Minimal web dashboard)
 
 ---
 
