@@ -71,8 +71,8 @@ python queuectl.py config set max_retries 5
 python queuectl.py config get max_retries
 ```
 
-Basic job completes successfully.
-![Basic job completes successfully.](QueueCTL/outputs/Basic job completes successfully.)
+
+![Basic job completes successfully.](QueueCTL/outputs/Basic job completes successfully..jpg)
 
 Failed job retries with backoff and moves to DLQ.
 ![Failed job retries with backoff and moves to DLQ.](outputs/Failed job retries with backoff and moves to DLQ.)
