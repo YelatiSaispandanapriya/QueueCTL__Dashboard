@@ -1,4 +1,0 @@
-﻿{
-    "id": "job_fail",
-    "command": "python -c \"import sys; sys.exit(1)\""
-}
