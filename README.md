@@ -170,23 +170,23 @@ python queuectl.py config get max_retries
 
 ## Bonus Features Implemented
 
-- Job timeout handling
+# Job timeout handling
   ![Job timeout handling](QueueCTL/outputs/op1.png)
 
   
 
-- Job priority queues
+# Job priority queues
 ![Job priority queues](QueueCTL/outputs/op2.png)
 
 
   
-- Scheduled/delayed jobs (`run_at`)
+# Scheduled/delayed jobs (`run_at`)
 ![Scheduleddelayed jobs (run_at)-Before time](QueueCTL/outputs/op3a.png)
 ![Scheduleddelayed jobs (run_at)-after time](QueueCTL/outputs/op3b.png)
 
 
 
-- Minimal web dashboard
+# Minimal web dashboard
 ![Minimal web dashboard](QueueCTL/outputs/op4.png)
 
 
