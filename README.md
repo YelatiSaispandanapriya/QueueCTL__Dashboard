@@ -6,7 +6,7 @@
 
 ---
 
-## 1️⃣ Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 - Python 3.10+
@@ -90,7 +90,7 @@ Job data survives restart.
 
 ---
 
-## 3️⃣ Architecture Overview
+## Architecture Overview
 
 ![Design](images/logo.png)
 
@@ -179,7 +179,7 @@ Job data survives restart.
 
 ---
 
-## 6️⃣ Example Job JSON
+## Example Job JSON
 
 ```json
 {
@@ -187,4 +187,5 @@ Job data survives restart.
     "command": "python -c \"import time; time.sleep(10)\""
 }
 ```
-
+## Recording Link
+https://drive.google.com/file/d/1oRrbCC4-AH5o39YOrZNGANpbneWYzgU4/view?usp=drivesdk 
