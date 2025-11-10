@@ -72,7 +72,7 @@ python queuectl.py config get max_retries
 ```
 
 
-![My Image](QueueCTL/images/image1.png)
+![Basic job completes successfully.](QueueCTL\outputs\Basicjobcompletessuccessfully..jpg)
 
 Failed job retries with backoff and moves to DLQ.
 ![Failed job retries with backoff and moves to DLQ.](outputs/Failed job retries with backoff and moves to DLQ.)
