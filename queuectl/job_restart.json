@@ -1,0 +1,4 @@
+{
+    "id": "job_restart",
+    "command": "echo Job survives restart"
+}

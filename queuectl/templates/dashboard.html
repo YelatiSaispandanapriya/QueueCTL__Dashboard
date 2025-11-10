@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QueueCTL Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        .summary {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .pending { color: #e67e22; font-weight: 600; }
+        .processing { color: #3498db; font-weight: 600; }
+        .completed { color: #27ae60; font-weight: 600; }
+        .failed { color: #c0392b; font-weight: 600; }
+        .dead { color: #7f8c8d; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <h1>QueueCTL Job Dashboard</h1>
+
+    <div class="summary">
+        <strong>Total Jobs:</strong> {{ stats.total }} &nbsp; | &nbsp;
+        <strong>Pending:</strong> {{ stats.pending }} &nbsp; | &nbsp;
+        <strong>Processing:</strong> {{ stats.processing }} &nbsp; | &nbsp;
+        <strong>Completed:</strong> {{ stats.completed }} &nbsp; | &nbsp;
+        <strong>Failed:</strong> {{ stats.failed }} &nbsp; | &nbsp;
+        <strong>Dead:</strong> {{ stats.dead }}
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Job ID</th>
+                <th>State</th>
+                <th>Attempts</th>
+                <th>Created At</th>
+                <th>Updated At</th>
+                <th>Priority</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in jobs %}
+            <tr>
+                <td>{{ job['id'] }}</td>
+                <td class="{{ job['state'] }}">{{ job['state'].capitalize() }}</td>
+                <td>{{ job['attempts'] }}</td>
+                <td>{{ job['created_at'] }}</td>
+                <td>{{ job['updated_at'] }}</td>
+                <td>{{ job['priority'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
